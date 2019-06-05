@@ -1,7 +1,50 @@
-.testing {
-  width: 71.42857%; }
+/*
+variables
+*******************************************************************************/
+/*
+mixins
+*******************************************************************************/
+/*
+base styles
+*******************************************************************************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 body {
-  background-color: firebrick;
-  padding: 90px;
-  color: yellow; }
+  box-sizing: border-box;
+  height: 1200px; }
+
+header {
+  height: 100vh;
+  width: 100vw; }
+
+/*
+navigation
+*******************************************************************************/
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  nav ul {
+    display: table;
+    width: 100%; }
+    nav ul li {
+      display: table-cell;
+      width: 50%; }
+      nav ul li ul.nav-item-parent {
+        width: 50%;
+        margin-left: 50%; }
+
+/*
+utilities
+*******************************************************************************/
+.u-float-right {
+  float: right; }
+
+/*
+grid scss
+*******************************************************************************/
