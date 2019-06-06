@@ -2,22 +2,28 @@ doctype html
 html(lang='en')
   head
     title Anna Catlin Yoga 
+    link(href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet")
     link(rel="stylesheet" type="text/css" href="./css/main.css")
   body
     div.hero
       header
         nav
-          ul
+          ul.nav-list
             li
-              a(href='#' class="logo") Anna Catlin
+              a(href='#' class="logo nav-link") Anna Catlin
             li
               ul.nav-item-parent
                 li.nav-item 
-                  a(href='#') About
+                  a(href='#' class="nav-link") About
                 li.nav-item 
-                  a(href='#') Yoga
+                  a(href='#' class="nav-link") Yoga
                 li.nav-item 
-                  a(href='#') Contact
+                  a(href='#' class="nav-link nav-link-button") Contact
+                  
+        .header-text
+          h1 Welcome to this beautiful and #[br] ancient practice
+          a(href='#' class="nav-link nav-link-button") Join today
+      
     main 
       
     script(type="text/javascript" src="./js/main.js")

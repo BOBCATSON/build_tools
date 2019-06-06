@@ -7,7 +7,7 @@ variables
 // $gutter-vertical: 8rem;
 // $gutter-vertical-small: 6rem;
 // $gutter-horizontal: 6rem;
-
+$color-black: #000;
 /*
 mixins
 *******************************************************************************/
@@ -41,15 +41,26 @@ base styles
 
 body {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
   height:1200px;
 }
 
 header {
   height: 100vh;
   width: 100vw;
-  // background-image: url('./../images/yoga_3.jpg');
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  background-image: url('./../images/yoga_3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(107,107,107,1);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(107,107,107,1);
+  box-shadow: 0px 5px 10px 0px rgba(107,107,107,1);
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    // color: inherit;
+  }
 }
 
 /*
@@ -60,17 +71,79 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+
   & ul {
     display: table;
     width: 100%;
+    // padding: 1rem;
+
     & li {
       display: table-cell;
       width: 50%;
+      vertical-align: middle;
+      padding: 0 1rem;
+
+      & a.logo {
+        display: inline-block;
+        padding: 0 1rem;
+        font-size: 2rem;
+        letter-spacing: 3px;
+      }
+
       & ul.nav-item-parent {
-        width: 50%;
-        margin-left: 50%;
+        width: 70%;
+        margin-left: 30%;
+        padding: 1rem;
+
+        & li.nav-item  {
+          max-width: 33.3333333333333%;
+          text-align: center;
+
+          & a {
+              display: inline-block;
+              padding: 1rem;
+          }
+        }
       }
     }
+  }
+}
+
+.nav-link {
+  color: whitesmoke;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+
+  &-button {
+    border: solid 2px whitesmoke;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: whitesmoke;
+      color: $color-black;
+    }
+  }
+}
+
+/*
+header text
+*******************************************************************************/
+
+.header-text {
+  @include perfectCenter
+  text-align: center;
+  & h1 {
+    font-weight: lighter;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+  }
+  & > a {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1.75rem 0 0 0;
   }
 }
 
