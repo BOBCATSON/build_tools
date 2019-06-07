@@ -17,7 +17,7 @@ base styles
 body {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  height: 1200px; }
+  height: 1500px; }
 
 header {
   height: 100vh;
@@ -30,7 +30,10 @@ header {
   box-shadow: 0px 5px 10px 0px #6b6b6b; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
+  a:visited {
+    color: #fff; }
 
 /*
 navigation
@@ -51,7 +54,9 @@ nav {
         display: inline-block;
         padding: 0 1rem;
         font-size: 2rem;
-        letter-spacing: 3px; }
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase; }
       nav ul li ul.nav-item-parent {
         width: 70%;
         margin-left: 30%;
@@ -68,10 +73,18 @@ nav {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: lighter;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  transition: transform .8s ease; }
+  .nav-link:hover:not(.logo) {
+    transform: scale(1.2); }
   .nav-link-button {
-    border: solid 2px whitesmoke;
-    transition: background-color 0.5s ease; }
+    color: whitesmoke;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border: solid 1px whitesmoke;
+    transition: all .8s ease; }
     .nav-link-button:hover {
       background-color: whitesmoke;
       color: #000; }
@@ -80,21 +93,26 @@ nav {
 header text
 *******************************************************************************/
 .header-text {
+  margin: 2rem 0 0 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   text-align: center; }
   .header-text h1 {
-    font-weight: lighter;
+    font-weight: 100;
     color: whitesmoke;
     letter-spacing: 2px;
-    font-size: 2.25rem; }
-  .header-text > a {
+    font-size: 3.5rem; }
+  .header-text > a.hero-button {
     display: inline-block;
     padding: 1rem;
     margin: 1.75rem 0 0 0; }
 
+/*
+sections
+*******************************************************************************/
 /*
 utilities
 *******************************************************************************/

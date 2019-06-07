@@ -2,15 +2,15 @@ doctype html
 html(lang='en')
   head
     title Anna Catlin Yoga 
-    link(href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap" rel="stylesheet")
     link(rel="stylesheet" type="text/css" href="./css/main.css")
   body
     div.hero
       header
-        nav
+        nav.nav
           ul.nav-list
             li
-              a(href='#' class="logo nav-link") Anna Catlin
+              a(href='#' class="logo logo-link") Anna Catlin
             li
               ul.nav-item-parent
                 li.nav-item 
@@ -18,14 +18,17 @@ html(lang='en')
                 li.nav-item 
                   a(href='#' class="nav-link") Yoga
                 li.nav-item 
-                  a(href='#' class="nav-link nav-link-button") Contact
+                  a(href='#' class="nav-link-button") Contact
                   
         .header-text
           h1 Welcome to this beautiful and #[br] ancient practice
-          a(href='#' class="nav-link nav-link-button") Join today
+          a(href='#' class="nav-link-button hero-button") Join today
+          
+      .about-section
+        h2.about-section-header Anna has been an accredited teacher for over 24 years.
       
     main 
-      
+    
     script(type="text/javascript" src="./js/main.js")
       
       

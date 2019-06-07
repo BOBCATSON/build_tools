@@ -8,17 +8,19 @@ variables
 // $gutter-vertical-small: 6rem;
 // $gutter-horizontal: 6rem;
 $color-black: #000;
+$color-white: #fff;
+
 /*
 mixins
 *******************************************************************************/
 
-// @mixin clearfix {
-//   &::after {
-//     content: "";
-//     display: table;
-//     clear: both;
-//   }
-// }
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 @mixin perfectCenter {
   position: absolute;
@@ -42,7 +44,7 @@ base styles
 body {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  height:1200px;
+  height:1500px;
 }
 
 header {
@@ -58,8 +60,9 @@ header {
 
 a {
   text-decoration: none;
+  cursor: pointer;
   &:visited {
-    // color: inherit;
+    color: $color-white;
   }
 }
 
@@ -68,6 +71,7 @@ navigation
 *******************************************************************************/
 
 nav {
+  // background-image: linear-gradient(to bottom, rgba($color-black, .9), rgba($color-black, .8));
   position: fixed;
   top: 0;
   width: 100%;
@@ -87,7 +91,9 @@ nav {
         display: inline-block;
         padding: 0 1rem;
         font-size: 2rem;
-        letter-spacing: 3px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
       }
 
       & ul.nav-item-parent {
@@ -115,10 +121,22 @@ nav {
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 2px;
+  transition: transform .8s ease;
+  // border: solid 1px transparent;
+
+  &:hover:not(.logo) {
+    // border-bottom: 1px solid whitesmoke;
+    transform: scale(1.2);
+  }
 
   &-button {
-    border: solid 2px whitesmoke;
-    transition: background-color 0.5s ease;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border: solid 1px whitesmoke;
+    transition: all .8s ease;
 
     &:hover {
       background-color: whitesmoke;
@@ -132,20 +150,33 @@ header text
 *******************************************************************************/
 
 .header-text {
+  margin: 2rem 0 0 0;
   @include perfectCenter
+  width: 100%;
   text-align: center;
+
   & h1 {
-    font-weight: lighter;
+    font-weight: 100;
     color: whitesmoke;
     letter-spacing: 2px;
-    font-size: 2.25rem;
+    font-size: 3.5rem;
   }
-  & > a {
+
+  & > a.hero-button {
     display: inline-block;
     padding: 1rem;
     margin: 1.75rem 0 0 0;
   }
 }
+
+/*
+sections
+*******************************************************************************/
+
+.about-section {
+
+}
+
 
 /*
 utilities
